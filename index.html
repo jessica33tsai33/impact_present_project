@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    </link>
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+    <title>廠區風險呈現網站</title>
+    <script type="text/javascript" src='./js/test_credentials.js'></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+    <script type="text/javascript" src="./js/xlsx.full.min.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript" src="js/justgage-1.2.2/raphael-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/justgage-1.2.2/justgage.js"></script>
+    <div class="heading">
+        <h2> 廠區風險呈現 </h2>
+    </div>
+    <div class="row no-gutters">
+        <div class="col-sm-6">
+            <div class="left_context">
+                <div class="xlsx_upload">
+                    <label class="btn btn-info btn-sm">
+                        <input id="upload_xlsx" style="display:none;" type="file" onchange="importf(this)">
+                        <i class="fa fa-paperclip"></i> 上傳廠區資料
+                    </label>
+                    <label class="btn btn-info btn-sm">
+                        <input type="submit" style="display:none;" name="show_factory" onclick="addInfoBubble()">
+                        <i class="fa fa-map-o"></i> 顯示廠區地點
+                    </label>
+                    <script type="text/javascript" src="./js/xlsx_process.js"></script>
+                </div>
+                <div class="mapContainer" id="mapContainer">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="right_context">
+                <div class="factory_data" id="factory_data">
+                    <!-- 顯示廠區基本資料區域 -->
+                </div>
+                <div class="impact_data panel panel-default">
+                    <!-- 顯示廠區風險資料區域 -->
+                    <div class="panel-heading" id="panel-heading">
+                        <!-- 顯示風險名稱 -->
+                    </div>
+                    <div class="tab-content" id="tab-content">
+                        <!-- 顯示風險內容 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="./js/map.js"></script>
+        <script type="text/javascript" src="./js/gauge.js"></script>
+        <script type="text/javascript" src="js/impact_display.js"></script>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+
+</html>
