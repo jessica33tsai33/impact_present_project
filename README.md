@@ -1,2 +1,3 @@
 # impact_present_project
- show factory's impact
+
+企業得以透過上傳 .xlsx 檔案，在網站上呈現各廠區的地點，點選該廠區，右方可以看到廠區的基本資訊、各項風險評估結果
